@@ -38,6 +38,8 @@ Module Employee_modules
     End Function
 
     Public Function GetAllEmployee() As List(Of String())
+        MDI_admin.fullname = "sdfasdfa"
+
         Dim dataList As New List(Of String())
         Using SQLConnection As New MySqlConnection(db.ConnectionString())
             Using sqlCommand As New MySqlCommand()

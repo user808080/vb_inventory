@@ -2,6 +2,7 @@
 
 Public Class Manage_employee
     Private Sub Manage_employee_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         'Dim dataArray As List(Of String()) = Employee_modules.GetAllEmployee()
         'For Each arr As String() In dataArray
         '    'Dim employeeID As String

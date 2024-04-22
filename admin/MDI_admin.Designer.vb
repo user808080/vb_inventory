@@ -25,13 +25,14 @@ Partial Class MDI_admin
         Me.ms_navigation = New System.Windows.Forms.MenuStrip()
         Me.HomeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ManageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.TransactionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ReportsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.OthersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EmployeeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RiceDataToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SupplierToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StorageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TransactionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReportsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OthersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.lbl_fullname = New System.Windows.Forms.Label()
         Me.ms_navigation.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -41,40 +42,22 @@ Partial Class MDI_admin
         Me.ms_navigation.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HomeToolStripMenuItem, Me.ManageToolStripMenuItem, Me.TransactionToolStripMenuItem, Me.ReportsToolStripMenuItem, Me.OthersToolStripMenuItem})
         Me.ms_navigation.Location = New System.Drawing.Point(0, 0)
         Me.ms_navigation.Name = "ms_navigation"
-        Me.ms_navigation.Size = New System.Drawing.Size(1348, 28)
+        Me.ms_navigation.Size = New System.Drawing.Size(1348, 30)
         Me.ms_navigation.TabIndex = 1
         Me.ms_navigation.Text = "MenuStrip1"
         '
         'HomeToolStripMenuItem
         '
         Me.HomeToolStripMenuItem.Name = "HomeToolStripMenuItem"
-        Me.HomeToolStripMenuItem.Size = New System.Drawing.Size(64, 24)
+        Me.HomeToolStripMenuItem.Size = New System.Drawing.Size(64, 26)
         Me.HomeToolStripMenuItem.Text = "Home"
         '
         'ManageToolStripMenuItem
         '
         Me.ManageToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EmployeeToolStripMenuItem, Me.RiceDataToolStripMenuItem, Me.SupplierToolStripMenuItem, Me.StorageToolStripMenuItem})
         Me.ManageToolStripMenuItem.Name = "ManageToolStripMenuItem"
-        Me.ManageToolStripMenuItem.Size = New System.Drawing.Size(77, 24)
+        Me.ManageToolStripMenuItem.Size = New System.Drawing.Size(77, 26)
         Me.ManageToolStripMenuItem.Text = "Manage"
-        '
-        'TransactionToolStripMenuItem
-        '
-        Me.TransactionToolStripMenuItem.Name = "TransactionToolStripMenuItem"
-        Me.TransactionToolStripMenuItem.Size = New System.Drawing.Size(98, 24)
-        Me.TransactionToolStripMenuItem.Text = "Transaction"
-        '
-        'ReportsToolStripMenuItem
-        '
-        Me.ReportsToolStripMenuItem.Name = "ReportsToolStripMenuItem"
-        Me.ReportsToolStripMenuItem.Size = New System.Drawing.Size(74, 24)
-        Me.ReportsToolStripMenuItem.Text = "Reports"
-        '
-        'OthersToolStripMenuItem
-        '
-        Me.OthersToolStripMenuItem.Name = "OthersToolStripMenuItem"
-        Me.OthersToolStripMenuItem.Size = New System.Drawing.Size(66, 24)
-        Me.OthersToolStripMenuItem.Text = "Others"
         '
         'EmployeeToolStripMenuItem
         '
@@ -100,12 +83,42 @@ Partial Class MDI_admin
         Me.StorageToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.StorageToolStripMenuItem.Text = "Storage"
         '
+        'TransactionToolStripMenuItem
+        '
+        Me.TransactionToolStripMenuItem.Name = "TransactionToolStripMenuItem"
+        Me.TransactionToolStripMenuItem.Size = New System.Drawing.Size(98, 26)
+        Me.TransactionToolStripMenuItem.Text = "Transaction"
+        '
+        'ReportsToolStripMenuItem
+        '
+        Me.ReportsToolStripMenuItem.Name = "ReportsToolStripMenuItem"
+        Me.ReportsToolStripMenuItem.Size = New System.Drawing.Size(74, 26)
+        Me.ReportsToolStripMenuItem.Text = "Reports"
+        '
+        'OthersToolStripMenuItem
+        '
+        Me.OthersToolStripMenuItem.Name = "OthersToolStripMenuItem"
+        Me.OthersToolStripMenuItem.Size = New System.Drawing.Size(66, 26)
+        Me.OthersToolStripMenuItem.Text = "Others"
+        '
+        'lbl_fullname
+        '
+        Me.lbl_fullname.AutoSize = True
+        Me.lbl_fullname.Location = New System.Drawing.Point(16, 36)
+        Me.lbl_fullname.Name = "lbl_fullname"
+        Me.lbl_fullname.Size = New System.Drawing.Size(62, 16)
+        Me.lbl_fullname.TabIndex = 3
+        Me.lbl_fullname.Text = "Fullname"
+        '
         'MDI_admin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.ClientSize = New System.Drawing.Size(1348, 721)
+        Me.Controls.Add(Me.lbl_fullname)
         Me.Controls.Add(Me.ms_navigation)
+        Me.DoubleBuffered = True
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.ms_navigation
         Me.Name = "MDI_admin"
@@ -128,4 +141,5 @@ Partial Class MDI_admin
     Friend WithEvents TransactionToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReportsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents OthersToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents lbl_fullname As Label
 End Class

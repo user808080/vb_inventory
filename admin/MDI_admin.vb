@@ -3,8 +3,6 @@
 Public Class MDI_admin
     Public fullname As String
     Private Sub MDI_admin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim version As Version = GetType(MySqlConnection).Assembly.GetName().Version
-        MessageBox.Show(version.ToString())
         Dim childForm As New Home()
         childForm.MdiParent = Me
         childForm.Show()

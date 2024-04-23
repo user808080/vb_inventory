@@ -11,7 +11,7 @@ Public Class Database
         Dim user As String = ConfigurationManager.AppSettings("user")
         Dim password As String = ConfigurationManager.AppSettings("password")
 
-        conn = "Server=" & server & ";Database=" & dbname & ";Uid=" & user & ";Pwd=" & password & ";"
+        conn = "Server=" & server & ";Database=" & dbname & ";Uid=" & user & ";Pwd=" & password & ";Port=" & port & ";"
     End Sub
 
     Public Function ConnectionString() As String

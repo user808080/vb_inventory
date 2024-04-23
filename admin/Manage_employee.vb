@@ -72,4 +72,25 @@ Public Class Manage_employee
             End If
         End If
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim modal As New Home()
+        modal.ShowDialog()
+    End Sub
+
+    Private Sub btn_delete_Click(sender As Object, e As EventArgs) Handles btn_delete.Click
+        Dim result As DialogResult = MessageBox.Show("Are you sure you want to DELETE employee?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+        If result = DialogResult.Yes Then
+            ' User clicked Yes
+            btn_update.Enabled = False
+            btn_delete.Enabled = False
+            If Employee_modules.DeleteEmployee(tbox_employee_id.Text()) Then
+                Datagridview_modules.DisplayEmployee(dgv_employee_list)
+                MessageBox.Show("You have successfully deleted an employee!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Else
+                MessageBox.Show("There's seem to be a problem with the data.", "Cannot Proceed", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
+        End If
+    End Sub
 End Class

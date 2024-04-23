@@ -33,7 +33,7 @@ Partial Class Home
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(608, 337)
+        Me.Label1.Location = New System.Drawing.Point(661, 337)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(474, 29)
         Me.Label1.TabIndex = 0
@@ -43,7 +43,7 @@ Partial Class Home
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Arial Black", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(563, 283)
+        Me.Label2.Location = New System.Drawing.Point(616, 283)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(164, 40)
         Me.Label2.TabIndex = 1
@@ -53,9 +53,9 @@ Partial Class Home
         '
         Me.pbox_logo.BackgroundImage = CType(resources.GetObject("pbox_logo.BackgroundImage"), System.Drawing.Image)
         Me.pbox_logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.pbox_logo.Location = New System.Drawing.Point(12, 129)
+        Me.pbox_logo.Location = New System.Drawing.Point(116, 141)
         Me.pbox_logo.Name = "pbox_logo"
-        Me.pbox_logo.Size = New System.Drawing.Size(572, 394)
+        Me.pbox_logo.Size = New System.Drawing.Size(525, 365)
         Me.pbox_logo.TabIndex = 2
         Me.pbox_logo.TabStop = False
         '
@@ -70,7 +70,7 @@ Partial Class Home
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.pbox_logo)
         Me.DoubleBuffered = True
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Location = New System.Drawing.Point(0, 10)
         Me.MaximizeBox = False
         Me.MinimizeBox = False

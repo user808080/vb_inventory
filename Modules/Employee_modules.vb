@@ -38,7 +38,6 @@ Module Employee_modules
     End Function
 
     Public Function GetAllEmployee() As List(Of String())
-        MDI_admin.fullname = "sdfasdfa"
 
         Dim dataList As New List(Of String())
         Using SQLConnection As New MySqlConnection(db.ConnectionString())
@@ -81,6 +80,35 @@ Module Employee_modules
                     .Parameters.AddWithValue("@first_name", firstName)
                     .Parameters.AddWithValue("@last_name", lastName)
                     .Parameters.AddWithValue("@contact_no", contactNo)
+                End With
+                Try
+                    SQLConnection.Open()
+                    sqlCommand.ExecuteNonQuery()
+
+                    iReturn = True
+                Catch ex As MySqlException
+
+                    iReturn = False
+                Finally
+                    If SQLConnection.State = ConnectionState.Open Then
+                        SQLConnection.Close()
+                    End If
+                End Try
+            End Using
+        End Using
+
+        Return iReturn
+    End Function
+
+    Public Function DeleteEmployee(ByVal employeeId As String) As Boolean
+        Dim iReturn As Boolean
+        Using SQLConnection As New MySqlConnection(db.ConnectionString())
+            Using sqlCommand As New MySqlCommand()
+                With sqlCommand
+                    .CommandText = "DELETE FROM employee WHERE `employee_id` = @employee_id"
+                    .Connection = SQLConnection
+                    .CommandType = CommandType.Text
+                    .Parameters.AddWithValue("@employee_id", employeeId)
                 End With
                 Try
                     SQLConnection.Open()

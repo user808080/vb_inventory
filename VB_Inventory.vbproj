@@ -78,16 +78,143 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="admin\Add_employee_dialog.Designer.vb">
+      <DependentUpon>Add_employee_dialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Add_employee_dialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin\Add_products_offered_dialog.Designer.vb">
+      <DependentUpon>Add_products_offered_dialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Add_products_offered_dialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin\Add_rice_dialog.Designer.vb">
+      <DependentUpon>Add_rice_dialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Add_rice_dialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin\Add_sale_dialog.Designer.vb">
+      <DependentUpon>Add_sale_dialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Add_sale_dialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin\Add_stock_in_dialog.Designer.vb">
+      <DependentUpon>Add_stock_in_dialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Add_stock_in_dialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin\Add_stock_out_dialog.Designer.vb">
+      <DependentUpon>Add_stock_out_dialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Add_stock_out_dialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin\Add_storage_dialog.Designer.vb">
+      <DependentUpon>Add_storage_dialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Add_storage_dialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin\Add_supplier_dialog.Designer.vb">
+      <DependentUpon>Add_supplier_dialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Add_supplier_dialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="admin\Manage_employee.Designer.vb">
       <DependentUpon>Manage_employee.vb</DependentUpon>
     </Compile>
     <Compile Include="admin\Manage_employee.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="admin\Manage_rice_data.Designer.vb">
+      <DependentUpon>Manage_rice_data.vb</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Manage_rice_data.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin\Manage_storage.Designer.vb">
+      <DependentUpon>Manage_storage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Manage_storage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin\Manage_supplier.Designer.vb">
+      <DependentUpon>Manage_supplier.vb</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Manage_supplier.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="admin\MDI_admin.Designer.vb">
       <DependentUpon>MDI_admin.vb</DependentUpon>
     </Compile>
     <Compile Include="admin\MDI_admin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin\Report_rice_ledger.Designer.vb">
+      <DependentUpon>Report_rice_ledger.vb</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Report_rice_ledger.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin\Search_rice_dialog.Designer.vb">
+      <DependentUpon>Search_rice_dialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Search_rice_dialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin\Search_storage_dialog.Designer.vb">
+      <DependentUpon>Search_storage_dialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Search_storage_dialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin\Search_supplier_dialog.Designer.vb">
+      <DependentUpon>Search_supplier_dialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Search_supplier_dialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin\Transaction_sales.Designer.vb">
+      <DependentUpon>Transaction_sales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Transaction_sales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin\Transaction_stock_in.Designer.vb">
+      <DependentUpon>Transaction_stock_in.vb</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Transaction_stock_in.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin\Transaction_stock_out.Designer.vb">
+      <DependentUpon>Transaction_stock_out.vb</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Transaction_stock_out.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="employee\MDI_employee.Designer.vb">
+      <DependentUpon>MDI_employee.vb</DependentUpon>
+    </Compile>
+    <Compile Include="employee\MDI_employee.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExcelExport.vb" />
+    <Compile Include="guest\MDI_guest.Designer.vb">
+      <DependentUpon>MDI_guest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="guest\MDI_guest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="guest\Products_offered.Designer.vb">
+      <DependentUpon>Products_offered.vb</DependentUpon>
+    </Compile>
+    <Compile Include="guest\Products_offered.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Home.Designer.vb">
@@ -103,14 +230,17 @@
       <DependentUpon>Login.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MDI_employee.Designer.vb">
-      <DependentUpon>MDI_employee.vb</DependentUpon>
-    </Compile>
-    <Compile Include="MDI_employee.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Modules\Combobox_modules.vb" />
     <Compile Include="Modules\Datagridview_modules.vb" />
     <Compile Include="Modules\Employee_modules.vb" />
+    <Compile Include="Modules\General_modules.vb" />
+    <Compile Include="Modules\Report_rice_ledger_modules.vb" />
+    <Compile Include="Modules\Rice_modules.vb" />
+    <Compile Include="Modules\Sales_modules.vb" />
+    <Compile Include="Modules\StockIn_modules.vb" />
+    <Compile Include="Modules\StockOut_modules.vb" />
+    <Compile Include="Modules\Storage_modules.vb" />
+    <Compile Include="Modules\Supplier_modules.vb" />
     <Compile Include="Modules\Useraccess_modules.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -136,20 +266,80 @@
     <Compile Include="Database.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="admin\Add_employee_dialog.resx">
+      <DependentUpon>Add_employee_dialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin\Add_products_offered_dialog.resx">
+      <DependentUpon>Add_products_offered_dialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin\Add_rice_dialog.resx">
+      <DependentUpon>Add_rice_dialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin\Add_sale_dialog.resx">
+      <DependentUpon>Add_sale_dialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin\Add_stock_in_dialog.resx">
+      <DependentUpon>Add_stock_in_dialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin\Add_stock_out_dialog.resx">
+      <DependentUpon>Add_stock_out_dialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin\Add_storage_dialog.resx">
+      <DependentUpon>Add_storage_dialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin\Add_supplier_dialog.resx">
+      <DependentUpon>Add_supplier_dialog.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="admin\Manage_employee.resx">
       <DependentUpon>Manage_employee.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="admin\Manage_rice_data.resx">
+      <DependentUpon>Manage_rice_data.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin\Manage_storage.resx">
+      <DependentUpon>Manage_storage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin\Manage_supplier.resx">
+      <DependentUpon>Manage_supplier.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="admin\MDI_admin.resx">
       <DependentUpon>MDI_admin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin\Report_rice_ledger.resx">
+      <DependentUpon>Report_rice_ledger.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin\Search_rice_dialog.resx">
+      <DependentUpon>Search_rice_dialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin\Search_storage_dialog.resx">
+      <DependentUpon>Search_storage_dialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin\Search_supplier_dialog.resx">
+      <DependentUpon>Search_supplier_dialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin\Transaction_sales.resx">
+      <DependentUpon>Transaction_sales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin\Transaction_stock_in.resx">
+      <DependentUpon>Transaction_stock_in.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin\Transaction_stock_out.resx">
+      <DependentUpon>Transaction_stock_out.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employee\MDI_employee.resx">
+      <DependentUpon>MDI_employee.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="guest\MDI_guest.resx">
+      <DependentUpon>MDI_guest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="guest\Products_offered.resx">
+      <DependentUpon>Products_offered.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MDI_employee.resx">
-      <DependentUpon>MDI_employee.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -172,6 +362,35 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

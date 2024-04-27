@@ -30,9 +30,13 @@ Partial Class MDI_admin
         Me.SupplierToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StorageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TransactionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StockInToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StockOutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SalesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OthersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.lbl_fullname = New System.Windows.Forms.Label()
+        Me.LogOutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RiceLedgerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ms_navigation.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -49,14 +53,14 @@ Partial Class MDI_admin
         'HomeToolStripMenuItem
         '
         Me.HomeToolStripMenuItem.Name = "HomeToolStripMenuItem"
-        Me.HomeToolStripMenuItem.Size = New System.Drawing.Size(64, 24)
+        Me.HomeToolStripMenuItem.Size = New System.Drawing.Size(64, 26)
         Me.HomeToolStripMenuItem.Text = "Home"
         '
         'ManageToolStripMenuItem
         '
         Me.ManageToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EmployeeToolStripMenuItem, Me.RiceDataToolStripMenuItem, Me.SupplierToolStripMenuItem, Me.StorageToolStripMenuItem})
         Me.ManageToolStripMenuItem.Name = "ManageToolStripMenuItem"
-        Me.ManageToolStripMenuItem.Size = New System.Drawing.Size(77, 24)
+        Me.ManageToolStripMenuItem.Size = New System.Drawing.Size(77, 26)
         Me.ManageToolStripMenuItem.Text = "Manage"
         '
         'EmployeeToolStripMenuItem
@@ -85,30 +89,54 @@ Partial Class MDI_admin
         '
         'TransactionToolStripMenuItem
         '
+        Me.TransactionToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StockInToolStripMenuItem, Me.StockOutToolStripMenuItem, Me.SalesToolStripMenuItem})
         Me.TransactionToolStripMenuItem.Name = "TransactionToolStripMenuItem"
-        Me.TransactionToolStripMenuItem.Size = New System.Drawing.Size(98, 24)
+        Me.TransactionToolStripMenuItem.Size = New System.Drawing.Size(98, 26)
         Me.TransactionToolStripMenuItem.Text = "Transaction"
+        '
+        'StockInToolStripMenuItem
+        '
+        Me.StockInToolStripMenuItem.Name = "StockInToolStripMenuItem"
+        Me.StockInToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.StockInToolStripMenuItem.Text = "Stock In"
+        '
+        'StockOutToolStripMenuItem
+        '
+        Me.StockOutToolStripMenuItem.Name = "StockOutToolStripMenuItem"
+        Me.StockOutToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.StockOutToolStripMenuItem.Text = "Stock Out"
+        '
+        'SalesToolStripMenuItem
+        '
+        Me.SalesToolStripMenuItem.Name = "SalesToolStripMenuItem"
+        Me.SalesToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.SalesToolStripMenuItem.Text = "Sales"
         '
         'ReportsToolStripMenuItem
         '
+        Me.ReportsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RiceLedgerToolStripMenuItem})
         Me.ReportsToolStripMenuItem.Name = "ReportsToolStripMenuItem"
         Me.ReportsToolStripMenuItem.Size = New System.Drawing.Size(74, 24)
         Me.ReportsToolStripMenuItem.Text = "Reports"
         '
         'OthersToolStripMenuItem
         '
+        Me.OthersToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LogOutToolStripMenuItem})
         Me.OthersToolStripMenuItem.Name = "OthersToolStripMenuItem"
-        Me.OthersToolStripMenuItem.Size = New System.Drawing.Size(66, 24)
+        Me.OthersToolStripMenuItem.Size = New System.Drawing.Size(66, 26)
         Me.OthersToolStripMenuItem.Text = "Others"
         '
-        'lbl_fullname
+        'LogOutToolStripMenuItem
         '
-        Me.lbl_fullname.AutoSize = True
-        Me.lbl_fullname.Location = New System.Drawing.Point(16, 32)
-        Me.lbl_fullname.Name = "lbl_fullname"
-        Me.lbl_fullname.Size = New System.Drawing.Size(62, 16)
-        Me.lbl_fullname.TabIndex = 3
-        Me.lbl_fullname.Text = "Fullname"
+        Me.LogOutToolStripMenuItem.Name = "LogOutToolStripMenuItem"
+        Me.LogOutToolStripMenuItem.Size = New System.Drawing.Size(145, 26)
+        Me.LogOutToolStripMenuItem.Text = "Log Out"
+        '
+        'RiceLedgerToolStripMenuItem
+        '
+        Me.RiceLedgerToolStripMenuItem.Name = "RiceLedgerToolStripMenuItem"
+        Me.RiceLedgerToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.RiceLedgerToolStripMenuItem.Text = "Rice Ledger"
         '
         'MDI_admin
         '
@@ -116,14 +144,13 @@ Partial Class MDI_admin
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.ClientSize = New System.Drawing.Size(1348, 721)
-        Me.Controls.Add(Me.lbl_fullname)
         Me.Controls.Add(Me.ms_navigation)
         Me.DoubleBuffered = True
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.ms_navigation
         Me.Name = "MDI_admin"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Inventory Management System"
+        Me.Text = "Inventory Management System - Admin Access"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.ms_navigation.ResumeLayout(False)
         Me.ms_navigation.PerformLayout()
@@ -142,5 +169,9 @@ Partial Class MDI_admin
     Friend WithEvents TransactionToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReportsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents OthersToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents lbl_fullname As Label
+    Friend WithEvents LogOutToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents StockInToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents StockOutToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SalesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RiceLedgerToolStripMenuItem As ToolStripMenuItem
 End Class

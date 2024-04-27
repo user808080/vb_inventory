@@ -10,15 +10,15 @@ Module Useraccess_modules
 
         Select Case userType
             Case "Admin"
-                myQuery = "SELECT id, first_name, last_name, middle_name, extension_name FROM admin WHERE username = @username AND password = @password AND status = @status"
+                myQuery = "SELECT id, CONCAT(first_name, ' ', IF(middle_name != '' , CONCAT(LEFT(middle_name, 1), '.'), ''), ' ', last_name, IF(extension_name != '', extension_name, '')) AS full_name FROM admin WHERE username = @username AND password = @password AND status = @status"
 
             Case "Employee"
-                myQuery = "SELECT id, first_name, last_name, middle_name, extension_name FROM employee WHERE username = @username AND password = @password AND status = @status"
+                myQuery = "SELECT id, CONCAT(first_name, ' ', IF(middle_name != '' , CONCAT(LEFT(middle_name, 1), '.'), ''), ' ', last_name, IF(extension_name != '', extension_name, '')) AS full_name FROM employee WHERE username = @username AND password = @password AND status = @status"
             Case "Guest"
 
-                myQuery = "SELECT id, first_name, last_name, middle_name, extension_name FROM employee WHERE username = @username AND password = @password AND status = @status"
+                myQuery = "SELECT id, CONCAT(first_name, ' ', IF(middle_name != '' , CONCAT(LEFT(middle_name, 1), '.'), ''), ' ', last_name, IF(extension_name != '', extension_name, '')) AS full_name FROM employee WHERE username = @username AND password = @password AND status = @status"
             Case Else
-                myQuery = "SELECT id, first_name, last_name, middle_name, extension_name FROM employee WHERE username = @username AND password = @password AND status = @status"
+                myQuery = "SELECT id, CONCAT(first_name, ' ', IF(middle_name != '' , CONCAT(LEFT(middle_name, 1), '.'), ''), ' ', last_name, IF(extension_name != '', extension_name, '')) AS full_name FROM employee WHERE username = @username AND password = @password AND status = @status"
         End Select
 
         Using SQLConnection As New MySqlConnection(db.ConnectionString())
@@ -36,9 +36,9 @@ Module Useraccess_modules
                     Dim reader As MySqlDataReader = sqlCommand.ExecuteReader()
 
                     While reader.Read()
-                        Dim data = New String() {reader("first_name").ToString(), reader("middle_name").ToString(), reader("last_name").ToString(), reader("extension_name").ToString()}
+                        Dim data = New String() {reader("id").ToString(), reader("full_name").ToString()}
                         dataList.Add(data)
-                        accountData = New String() {True, reader("first_name").ToString()}
+                        accountData = New String() {True, reader("full_name").ToString()}
 
                     End While
 

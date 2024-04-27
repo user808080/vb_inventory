@@ -24,7 +24,7 @@ Partial Class Home
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Home))
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.lbl_fullname = New System.Windows.Forms.Label()
         Me.pbox_logo = New System.Windows.Forms.PictureBox()
         CType(Me.pbox_logo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -39,15 +39,15 @@ Partial Class Home
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Welcome to Inventory Management System"
         '
-        'Label2
+        'lbl_fullname
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Arial Black", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(616, 283)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(164, 40)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Hi! Admin"
+        Me.lbl_fullname.AutoSize = True
+        Me.lbl_fullname.Font = New System.Drawing.Font("Arial Black", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_fullname.Location = New System.Drawing.Point(616, 283)
+        Me.lbl_fullname.Name = "lbl_fullname"
+        Me.lbl_fullname.Size = New System.Drawing.Size(162, 40)
+        Me.lbl_fullname.TabIndex = 1
+        Me.lbl_fullname.Text = "Hi visitor!"
         '
         'pbox_logo
         '
@@ -66,7 +66,7 @@ Partial Class Home
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.ClientSize = New System.Drawing.Size(1328, 649)
         Me.ControlBox = False
-        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.lbl_fullname)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.pbox_logo)
         Me.DoubleBuffered = True
@@ -84,6 +84,6 @@ Partial Class Home
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
+    Friend WithEvents lbl_fullname As Label
     Friend WithEvents pbox_logo As PictureBox
 End Class

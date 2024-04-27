@@ -42,7 +42,7 @@ Partial Class Login
         Me.btn_login.Location = New System.Drawing.Point(548, 229)
         Me.btn_login.Name = "btn_login"
         Me.btn_login.Size = New System.Drawing.Size(95, 35)
-        Me.btn_login.TabIndex = 0
+        Me.btn_login.TabIndex = 3
         Me.btn_login.Text = "Log In"
         Me.btn_login.UseVisualStyleBackColor = True
         '
@@ -62,7 +62,7 @@ Partial Class Login
         Me.btn_exit.Location = New System.Drawing.Point(447, 229)
         Me.btn_exit.Name = "btn_exit"
         Me.btn_exit.Size = New System.Drawing.Size(95, 35)
-        Me.btn_exit.TabIndex = 2
+        Me.btn_exit.TabIndex = 4
         Me.btn_exit.Text = "Exit"
         Me.btn_exit.UseVisualStyleBackColor = True
         '
@@ -83,7 +83,7 @@ Partial Class Login
         Me.tbox_username.Location = New System.Drawing.Point(260, 133)
         Me.tbox_username.Name = "tbox_username"
         Me.tbox_username.Size = New System.Drawing.Size(383, 34)
-        Me.tbox_username.TabIndex = 4
+        Me.tbox_username.TabIndex = 0
         Me.tbox_username.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'tbox_password
@@ -93,7 +93,7 @@ Partial Class Login
         Me.tbox_password.Name = "tbox_password"
         Me.tbox_password.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.tbox_password.Size = New System.Drawing.Size(383, 34)
-        Me.tbox_password.TabIndex = 5
+        Me.tbox_password.TabIndex = 2
         Me.tbox_password.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.tbox_password.UseSystemPasswordChar = True
         '
@@ -120,9 +120,9 @@ Partial Class Login
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(257, 53)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(74, 16)
+        Me.Label4.Size = New System.Drawing.Size(64, 16)
         Me.Label4.TabIndex = 9
-        Me.Label4.Text = "User Type:"
+        Me.Label4.Text = "Log in as:"
         '
         'cbox_user_type
         '
@@ -134,7 +134,7 @@ Partial Class Login
         Me.cbox_user_type.Location = New System.Drawing.Point(260, 74)
         Me.cbox_user_type.Name = "cbox_user_type"
         Me.cbox_user_type.Size = New System.Drawing.Size(383, 37)
-        Me.cbox_user_type.TabIndex = 10
+        Me.cbox_user_type.TabIndex = 6
         '
         'Login
         '
@@ -152,6 +152,7 @@ Partial Class Login
         Me.Controls.Add(Me.btn_exit)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btn_login)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "Login"

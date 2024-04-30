@@ -2,7 +2,9 @@
 
 Module Useraccess_modules
     Dim db As New Database()
+
     Public Function LogIn(ByVal userType As String, ByVal userName As String, ByVal password As String) As Array
+
         Dim dataList As New List(Of String())
         Dim accountData() As String
         accountData = New String() {False, "name"}
@@ -10,15 +12,15 @@ Module Useraccess_modules
 
         Select Case userType
             Case "Admin"
-                myQuery = "SELECT id, CONCAT(first_name, ' ', IF(middle_name != '' , CONCAT(LEFT(middle_name, 1), '.'), ''), ' ', last_name, IF(extension_name != '', extension_name, '')) AS full_name FROM admin WHERE username = @username AND password = @password AND status = @status"
+                myQuery = "SELECT id, CONCAT(first_name, ' ', IF(middle_name != '' , CONCAT(LEFT(middle_name, 1), '.'), ''), ' ', last_name, IF(extension_name != '', extension_name, '')) AS full_name FROM admin WHERE BINARY username = @username AND password = @password AND status = @status"
 
             Case "Employee"
-                myQuery = "SELECT id, CONCAT(first_name, ' ', IF(middle_name != '' , CONCAT(LEFT(middle_name, 1), '.'), ''), ' ', last_name, IF(extension_name != '', extension_name, '')) AS full_name FROM employee WHERE username = @username AND password = @password AND status = @status"
+                myQuery = "SELECT id, CONCAT(first_name, ' ', IF(middle_name != '' , CONCAT(LEFT(middle_name, 1), '.'), ''), ' ', last_name, IF(extension_name != '', extension_name, '')) AS full_name FROM employee WHERE BINARY username = @username AND password = @password AND status = @status"
             Case "Guest"
 
-                myQuery = "SELECT id, CONCAT(first_name, ' ', IF(middle_name != '' , CONCAT(LEFT(middle_name, 1), '.'), ''), ' ', last_name, IF(extension_name != '', extension_name, '')) AS full_name FROM employee WHERE username = @username AND password = @password AND status = @status"
+                myQuery = "SELECT id, CONCAT(first_name, ' ', IF(middle_name != '' , CONCAT(LEFT(middle_name, 1), '.'), ''), ' ', last_name, IF(extension_name != '', extension_name, '')) AS full_name FROM employee WHERE BINARY username = @username AND password = @password AND status = @status"
             Case Else
-                myQuery = "SELECT id, CONCAT(first_name, ' ', IF(middle_name != '' , CONCAT(LEFT(middle_name, 1), '.'), ''), ' ', last_name, IF(extension_name != '', extension_name, '')) AS full_name FROM employee WHERE username = @username AND password = @password AND status = @status"
+                myQuery = "SELECT id, CONCAT(first_name, ' ', IF(middle_name != '' , CONCAT(LEFT(middle_name, 1), '.'), ''), ' ', last_name, IF(extension_name != '', extension_name, '')) AS full_name FROM employee WHERE BINARY username = @username AND password = @password AND status = @status"
         End Select
 
         Using SQLConnection As New MySqlConnection(db.ConnectionString())

@@ -2,8 +2,10 @@
 Imports MySql.Data.MySqlClient
 Public Class Database
     Private conn As String
+    Public cc As String
 
     ' Constructor
+
     Public Sub New()
         Dim server As String = ConfigurationManager.AppSettings("server")
         Dim port As String = ConfigurationManager.AppSettings("port")

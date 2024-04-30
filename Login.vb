@@ -64,7 +64,7 @@ Public Class Login
     End Sub
 
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        cbox_user_type.SelectedIndex = 0
+        cbox_user_type.SelectedIndex = 0S
     End Sub
 
     Private Sub cbox_user_type_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbox_user_type.SelectedIndexChanged
